@@ -2,6 +2,7 @@
 
 from bottle import static_file, route, run
 from threading import Thread
+import os
 
 import asyncio
 import websockets
@@ -25,7 +26,8 @@ def httpHandler():
         def server_static(filename):
             return static_file(filename, root='./app')
 
-        run(host='localhost', port=9000)
+        #run(host='localhost', port=9000)
+        run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 
 
 async def receive_send(websocket, path):
