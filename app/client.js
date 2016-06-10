@@ -1,6 +1,6 @@
 'use strict';
 
-var ws = new WebSocket('ws://ancient-reef-54763.herokuapp.com:3000/');
+var ws = new WebSocket('ws://localhost:3000/');
 
 $(function () {
   $('form').submit(function(){
