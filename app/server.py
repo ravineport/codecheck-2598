@@ -54,7 +54,7 @@ async def receive_send(websocket, path):
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    start_server = websockets.serve(receive_send, '0.0.0.0', int(os.environ.get('PORT', 3000)))
+    start_server = websockets.serve(receive_send, '0.0.0.0', 3000)
     server = loop.run_until_complete(start_server)
     print('Listen')
 
