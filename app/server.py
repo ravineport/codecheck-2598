@@ -35,7 +35,6 @@ async def receive_send(websocket, path):
 
     global clients
     clients.add(websocket)
-    print(websocket)
     try:
         while True:
             msg = await websocket.recv()
@@ -48,7 +47,6 @@ async def receive_send(websocket, path):
         pass
 
     finally:
-        print("remove")
         clients.remove(websocket)
 
 
