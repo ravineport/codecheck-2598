@@ -33,6 +33,7 @@ def httpHandler():
 async def receive_send(websocket, path):
     # Please write your code here
 
+    print("new client")
     global clients
     clients.add(websocket)
     print(websocket)
