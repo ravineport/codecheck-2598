@@ -1,6 +1,6 @@
 'use strict';
 
-var uri = "wss://" + location.hostname + ":3000";
+var uri = "wss://" + location.hostname + "/ws";
 var ws = new WebSocket(uri);
 
 
