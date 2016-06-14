@@ -1,1 +1,3 @@
 node_modules/
+app/__pycache__
+bot.pyc

@@ -1,6 +1,6 @@
 'use strict';
 
-var uri = "wss://" + location.hostname + "/ws";
+var uri = "ws://" + location.host + "/websocket";
 var ws = new WebSocket(uri);
 
 
@@ -14,6 +14,9 @@ $(function () {
     $('#m').val('');
     return false;
   });
+  ws.onopen = function(evt) {
+    console.log('connected');
+  }
   ws.onmessage = function(msg){
     var returnObject = JSON.parse(msg.data);
     $('#messages').append($('<li>')).append($('<span id="clientId">').text(returnObject.id)).append($('<span id="clientMessage">').text(returnObject.data));
