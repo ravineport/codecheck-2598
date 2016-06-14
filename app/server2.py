@@ -13,12 +13,11 @@ import re
 clients = set()
 my_bot = Bot()
 
-#serving index.html file on "http://localhost:9000"
 @route('/')
 def index():
     static_file('index.css', root='./app')
     static_file('client.js', root='./app')
-    return static_file("index.html", root='./app')
+    return static_file('index.html', root='./app')
 
 @get('/websocket', apply=[websocket])
 def chat(ws):
