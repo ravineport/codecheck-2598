@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from bottle import static_file, route, run, get
 from bottle.ext.websocket import GeventWebSocketServer
@@ -18,10 +19,6 @@ def index():
     static_file('index.css', root='./app')
     static_file('client.js', root='./app')
     return static_file("index.html", root='./app')
-
-@route('/<filename>')
-def server_static(filename):
-    return static_file(filename, root='./app')
 
 @get('/websocket', apply=[websocket])
 def chat(ws):
