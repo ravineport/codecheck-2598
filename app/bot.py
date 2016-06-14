@@ -67,6 +67,6 @@ class Bot():
 
 if __name__ == '__main__':
     my_bot = Bot()
-    #print my_bot.todo_add(['today', 'aaaaa'])
-    #print my_bot.todo_delete('today')
-    #print my_bot.todo_list()
+    print my_bot.todo_add(['today', 'aaaaa'])
+    print my_bot.todo_delete('today')
+    print my_bot.todo_list()
