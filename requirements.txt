@@ -1,0 +1,4 @@
+bottle==0.12.9
+bottle-websocket==0.2.9
+MySQL-python==1.2.5
+SPARQLWrapper==1.7.6
