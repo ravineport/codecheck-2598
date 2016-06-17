@@ -15,7 +15,7 @@ class Bot():
     def recv_message(self, msg):
         msg = msg.strip()
         if re.match('bot', msg) == None or msg == 'bot':
-            return 'None'
+            return None
         command_list = re.split(' +', msg)[1:]
 
         # ping pong

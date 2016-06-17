@@ -32,7 +32,7 @@ def chat(ws):
             for u in clients:
                 u.send(json.dumps({'data': msg}))
             bot_res = my_bot.recv_message(msg)
-            if bot_res != 'None':
+            if bot_res != None:
                 for u in clients:
                     u.send(json.dumps({'data': bot_res}))
         else: break
